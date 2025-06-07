@@ -133,3 +133,6 @@ EMAIL_USE_TLS = True
 from decouple import config
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+import os  # Add at top if not already there
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
