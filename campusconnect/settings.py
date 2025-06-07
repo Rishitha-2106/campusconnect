@@ -136,3 +136,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 import os  # Add at top if not already there
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+from decouple import config
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
